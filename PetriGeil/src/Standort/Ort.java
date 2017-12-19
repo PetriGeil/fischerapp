@@ -36,6 +36,7 @@ public class Ort extends Standort {
 	}
 	
 	// Konstruktor
+	// lg = Längengrad / bg = Breitengrad
 	public Ort(double lg, double bg) {
 		super(lg, bg);
 	}

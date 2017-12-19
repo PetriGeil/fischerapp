@@ -36,6 +36,7 @@ public class Supermarkt extends Standort {
 	}
 
 	// Konstruktor
+	// lg = Längengrad / bg = Breitengrad
 	public Supermarkt(double lg, double bg) {
 		super(lg, bg);
 	}

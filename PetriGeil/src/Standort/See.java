@@ -36,6 +36,7 @@ public class See extends Standort {
 	}
 
 	// Konstruktor
+	// lg = Längengrad / bg = Breitengrad
 	public See(double lg, double bg) {
 		super(lg, bg);
 	}
