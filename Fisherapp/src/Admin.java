@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Admin extends Personen {
 
 	// Attribute
+	
+	//test
 
 	String supermarkt;
 	double[] gpsSupermarkt = new double[2];
