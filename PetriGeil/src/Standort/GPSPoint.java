@@ -1,6 +1,6 @@
 package Standort;
 
-// Klasse Location --> Fabian (mit Berger kreiert)
+// Klasse Location --> Fabian's Klasse verwenden? (mit Berger kreiert)
 
 public class GPSPoint {
 	// Attribute
