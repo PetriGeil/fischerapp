@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class HalloWelt {
 	public static void main(String[] args) {
-		HalloWelt test = new HalloWelt();
+		ArrayList<String> test = new ArrayList<String>();
 
 		test.add("Zürichsee");
 		test.add("Bodensee");

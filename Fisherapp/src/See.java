@@ -1,9 +1,25 @@
+import java.util.ArrayList;
 
 public class See {
 
+	ArrayList<String> seeListe = new ArrayList<String>();
+	
 	//Attribute 
-	String [] seename = new String[10];
-	double [][] gpsSee=new double[10][2];
+	String seename ;
+	double gpsSee;
+	
+	//Methoden
+	public String getSeename(int i) {
+		return seeListe.get(i);
+	}
+
+	public void setSee(String seename) {
+		seeListe.add(seename);
+	}
+	
+	public void removeSee(String seename) {
+		seeListe.remove(seename);
+	}
 	
 	//Konstruktor
 	 public See (){ 

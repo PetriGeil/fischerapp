@@ -52,7 +52,6 @@ public class Kunde extends Personen {
 
 	public boolean validateEmail(String email) {
 		return email.contains("@");
-
 	}
 
 	public void setEmail(String email) {
@@ -64,14 +63,11 @@ public class Kunde extends Personen {
 	}
 
 	public void setTelefon(String telefon) {
+		this.telefon = telefon;
+	}
 
-		// App nur für Schweizernummer?
-		boolean ok = telefon.startsWith("00");
-		if (ok) {
-			this.telefon = telefon;
-		} else {
-			System.out.println("Geben Sie Bitte eine gültige Telefonnummer ein.");
-		}
+	public boolean validateTelefon(String telefon) {
+		return (telefon.startsWith("0041") && telefon.length() == 11);
 	}
 
 	public String getStrasse() {
@@ -117,21 +113,8 @@ public class Kunde extends Personen {
 		return newsletter;
 	}
 
-	public void setNewsletter(String news) {
-		System.out.println(news);
-		if (news.equals("ja")) {
-			this.newsletter = true;
-			System.out.println(this.newsletter);
-			System.out.println("Sie haben den Newsletter erfolgreich abonniert. Wir freuen uns darüber.");
-		} else {
-			if (news.equals("nein")) {
-				this.newsletter = false;
-				System.out.println(
-						"Wir bedauern Ihre Entscheidung, Sie können den Newsletter jedoch jederzeit in Ihrem Konto aktivieren.");
-			} else {
-				System.out.println("Geben Sie entweder Ja oder Nein ein.");
-			}
-		}
+	public void setNewsletter(boolean news) {
+		this.newsletter = news;
 	}
 
 	public boolean isVerifiziert() {

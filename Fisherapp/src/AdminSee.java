@@ -1,17 +1,20 @@
-import java.util.Scanner;
-
 public class AdminSee {
 
 	public static void main(String[] args) {
+		See a = new See();
+		
 		
 		//Instanzierung
-		Admin a = new Admin();
-		a.createSee("Greifensee", 10, 10);
-		a.createSee("Zürichsee", 20, 20);
 		
-		System.out.println();
+		a.setSee("Greifensee");
+		a.setSee("Zürichsee");
+		a.setSee("Pfäffikersee");
 		
+		for (Object object : a.seeListe) {
+			System.out.println(object);
+		}
 		
+		a.removeSee("Greifensee");
 		
 		
 	}
