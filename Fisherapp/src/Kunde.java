@@ -2,30 +2,33 @@
 public class Kunde extends Personen {
 
 	// Attribute
-	String vorname = "laura";
-	String nachname = "sooder";
-	String email;
+	String vorname;
+	String nachname;
+	String mail;
 	String telefon;
 	String strasse;
-	String plz;
-	String ort;
-	String sana = "0800-0800";
+	Ort ort;
+	String sana;
 	boolean newsletter;
-
-	boolean verifiziert;
-
-	double[] meinStandort = new double[1];
-	String[] proofedWeather = new String[3];
-	String[] favoritenleiste = new String[4];
+	boolean authentifiziert = false;
+	double gpsMeinZuhause;
+	double gpsMeinStandort;
+	Wetter wetter;
+	// BestätigungWetter bestätigungwetter;
+	String[] favoriten = new String[5];
 
 	// Methoden
-	// Methode Registration
-	public boolean registration(String vorname, String nachname, String sana) {
+	// Methode Authentifizierung
+	public boolean isAuthentifiziert() {
+		return authentifiziert;
+	}
+
+	public boolean authentifizierung(String vorname, String nachname, String sana) {
 		if (this.vorname.equals(vorname) && this.nachname.equals(nachname) && this.sana.equals(sana)) {
-			System.out.println("Sie wurden verifiziert.");
+			System.out.println("Sie wurden authentifiziert.");
 			return true;
 		} else {
-			System.out.println("Sie wurden nicht verifiziert");
+			System.out.println("Sie wurden nicht authentifiziert");
 			return false;
 		}
 	}
@@ -42,20 +45,24 @@ public class Kunde extends Personen {
 		return nachname;
 	}
 
+	public boolean validationName(String name) {
+		return name.length() > 1;
+	}
+
 	public void setNachname(String nachname) {
 		this.nachname = nachname;
 	}
 
 	public String getEmail() {
-		return email;
+		return mail;
 	}
 
-	public boolean validateEmail(String email) {
-		return email.contains("@");
+	public boolean validationMail(String mail) {
+		return mail.contains("@");
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public String getTelefon() {
@@ -66,7 +73,7 @@ public class Kunde extends Personen {
 		this.telefon = telefon;
 	}
 
-	public boolean validateTelefon(String telefon) {
+	public boolean validationTelefon(String telefon) {
 		return (telefon.startsWith("0041") && telefon.length() == 11);
 	}
 
@@ -75,31 +82,20 @@ public class Kunde extends Personen {
 	}
 
 	public void setStrasse(String strasse) {
-		this.strasse = strasse;
-	}
-
-	public String getPlz() {
-		return plz;
-	}
-
-	public void setPlz(String plz) {
-		// App nur für PLZ in der Schweiz? 4 Lang?
-		int ok = plz.length();
-		if (ok == 4) {
-			this.plz = plz;
-		} else {
-			System.out.println("Geben Sie Bitte eine gültige Postleitzahl ein.");
-		}
 
 	}
-
-	public String getOrt() {
-		return ort;
+	
+	public boolean validationStrasse(String strasse) {
+		return strasse.length() > 6;
 	}
 
-	public void setOrt(String ort) {
-		this.ort = ort;
-	}
+	// public String getOrt() {
+	// return ort;
+	// }
+	//
+	// public void setOrt(String ort) {
+	// this.ort = ort;
+	// }
 
 	public String getSana() {
 		return sana;
@@ -107,6 +103,10 @@ public class Kunde extends Personen {
 
 	public void setSana(String sana) {
 		this.sana = sana;
+	}
+
+	public boolean validationSana(String sana) {
+		return (sana.contains("-") && sana.length() == 9);
 	}
 
 	public boolean isNewsletter() {
@@ -117,36 +117,30 @@ public class Kunde extends Personen {
 		this.newsletter = news;
 	}
 
-	public boolean isVerifiziert() {
-		return verifiziert;
+	public double getGpsMeinZuhause() {
+		return gpsMeinZuhause;
 	}
 
-	public void setVerifiziert(boolean verifiziert) {
-		this.verifiziert = verifiziert;
+	public void setGpsMeinZuhause(double gpsMeinZuhause) {
+		this.gpsMeinZuhause = gpsMeinZuhause;
 	}
 
-	public double[] getMeinStandort() {
-		return meinStandort;
+	public double getGpsMeinStandort() {
+		return gpsMeinStandort;
 	}
 
-	public void setMeinStandort(double[] meinStandort) {
-		this.meinStandort = meinStandort;
+	public void setGpsMeinStandort(double gpsMeinStandort) {
+		this.gpsMeinStandort = gpsMeinStandort;
 	}
 
-	public String[] getProofedWeather() {
-		return proofedWeather;
+	public String[] getFavoriten() {
+		return favoriten;
 	}
 
-	public void setProofedWeather(String[] proofedWeather) {
-		this.proofedWeather = proofedWeather;
+	public void setFavoriten(String[] favoriten) {
+		this.favoriten = favoriten;
 	}
 
-	public String[] getFavoritenleiste() {
-		return favoritenleiste;
-	}
 
-	public void setFavoritenleiste(String[] favoritenleiste) {
-		this.favoritenleiste = favoritenleiste;
-	}
 
 }

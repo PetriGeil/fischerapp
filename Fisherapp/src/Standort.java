@@ -1,4 +1,3 @@
-
 public abstract class Standort {
 
 	// Attribute
@@ -6,7 +5,7 @@ public abstract class Standort {
 	int fischwetter = 0; // Bewertung 6, 4, 1 Bezug von Enumeration "BewertungWetter"
 
 	// Methoden
-	public abstract void suchen();
+
 
 	public double getGpspoint() {
 		return gpspoint;
@@ -24,19 +23,21 @@ public abstract class Standort {
 		this.fischwetter = fischwetter;
 	}
 
-	// abstrakte Methoden
-	public abstract void erfassen();
-
-	public abstract void löschen();
-
-	public abstract void calcDistanz();
-
-	public abstract void aroundMe();
-
-	// Konstruktor der den Längen- und Breitengrad der Klasse GPSPoint bezieht
-	public Standort(double lg, double bg) {
-		super(lg, bg);
-	}
+//	public abstract void suchen();
+	
+//	// abstrakte Methoden
+//	public abstract void erfassen();
+//
+//	public abstract void löschen();
+//
+//	public abstract void calcDistanz();
+//
+//	public abstract void aroundMe();
+//
+//	 Konstruktor der den Längen- und Breitengrad der Klasse GPSPoint bezieht
+//	public Standort(double lg, double bg) {
+//		super(lg, bg);
+//	}
 
 	/*
 	 * Distanz zwischen zwei GPS-Koordinaten in Kilometer berechnen, kopiert von

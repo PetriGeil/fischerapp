@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class See {
+public class See extends Standort{
 
 	ArrayList<String> seeListe = new ArrayList<String>();
 	
