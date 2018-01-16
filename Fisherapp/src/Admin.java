@@ -5,20 +5,20 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Admin extends Personen {
 
 	// Attribute
-	String ort;
-	String plz;
-	double breitengrad;
-	double laengengrad;
-	String supermarkt;
-	BufferedReader br = null;
-	FileReader fr = null;
-	boolean enthalten = false;
-
+	private String ort;
+	private String plz;
+	private double breitengrad;
+	private double laengengrad;
+	private BufferedReader br = null;
+	private FileReader fr = null;
+	private boolean enthalten = false;
+	private ArrayList<Standort> standort = new ArrayList<Standort>();
+	
 	// Methoden definieren
 	// Verifikation
 
@@ -90,6 +90,13 @@ public class Admin extends Personen {
 		}
 	}
 
+	
+			
+
+	
+
+		
+	
 	public void erstellenSupermarkt(String supermarkt, String plz) {
 
 		try {

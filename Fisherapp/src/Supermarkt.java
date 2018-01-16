@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class Supermarket extends Standort {
+public class Supermarkt extends Standort {
 	ArrayList<String> supermarktListe = new ArrayList<String>();
 
 	// Attribute
-	String seename;
-	Ort ort; 
+	private String supermarkt;
+	int abbruch =1;
 
 
 	// Methoden
@@ -17,12 +17,27 @@ public class Supermarket extends Standort {
 		supermarktListe.add(supermarkt);
 	}
 
-	public void removeSupermarkt(String supermarkt) {
+	public void löschenSupermarkt(String supermarkt) {
 		supermarktListe.remove(supermarkt);
 	}
 
+	public void anzeigenSupermarkt() {
+		for (Object object : supermarktListe) {
+			System.out.println(object);
+		}
+	}
+
+	public void validationSupermarkt(String s) {
+		if (supermarktListe.contains(s)) {
+			System.out.println("Supermarkt bereits vorhanden.");
+			abbruch =1;
+		} else {
+			System.out.println("Supermarkt befindet sich noch nicht in der Liste ");
+		}
+	}
+
 	// Konstruktor
-	public Supermarket() {
+	public Supermarkt() {
 
 	}
 

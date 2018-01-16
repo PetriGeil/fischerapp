@@ -4,16 +4,16 @@ public class Kunde extends Personen {
 	// Attribute
 	String vorname;
 	String nachname;
-	String mail;
-	String telefon;
-	String strasse;
-	Ort ort;
+	private String mail;
+	private String telefon;
+	private String strasse;
+	private Ort ort;
 	String sana;
-	boolean newsletter;
-	boolean authentifiziert = false;
-	double gpsMeinZuhause;
-	double gpsMeinStandort;
-	Wetter wetter;
+	private boolean newsletter;
+	private boolean authentifiziert = false;
+	private double gpsMeinZuhause;
+	private double gpsMeinStandort;
+	private Wetter wetter;
 	// BestätigungWetter bestätigungwetter;
 	String[] favoriten = new String[5];
 

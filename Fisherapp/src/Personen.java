@@ -10,11 +10,11 @@ import java.util.Arrays;
 public abstract class Personen {
 	private static final String filename = "Konto.txt";
 	// Attribute
-	String passwort;
-	String benutzername;
-	BufferedReader br = null;
-	FileReader fr = null;
-	boolean enthalten = false;
+	private String passwort;
+	private String benutzername;
+	private BufferedReader br = null;
+	private FileReader fr = null;
+	private boolean enthalten = false;
 	public int abbruch;
 
 	// Methoden
@@ -27,7 +27,6 @@ public abstract class Personen {
 		try {
 			fr = new FileReader(filename);
 			br = new BufferedReader(fr);
-			String sCurrentLine;
 
 			File file = new File(filename);
 			BufferedWriter buff = new BufferedWriter(new FileWriter("Konto.txt", file.exists()));
@@ -66,7 +65,7 @@ public abstract class Personen {
 
 			while ((sCurrentLine = br.readLine()) != null) {
 				abbruch = 0;
-				if (sCurrentLine.equals(benutzername)) {
+				if (sCurrentLine.contains(benutzername)) {
 					abbruch = 1;
 					break;
 				} else {
@@ -97,7 +96,6 @@ public abstract class Personen {
 		try {
 			fr = new FileReader(filename);
 			br = new BufferedReader(fr);
-			String sCurrentLine;
 
 			File file = new File(filename);
 			BufferedWriter buff = new BufferedWriter(new FileWriter("Konto.txt", file.exists()));
@@ -127,11 +125,13 @@ public abstract class Personen {
 
 	public boolean login(String benutzername, String passwort) {
 		try {
+			
 			fr = new FileReader(filename);
 			br = new BufferedReader(fr);
-			String sCurrentLine = br.readLine();
+			String sCurrentLine;
 
 			while ((sCurrentLine = br.readLine()) != null) {
+				System.out.println(sCurrentLine);
 				if (sCurrentLine.contains(benutzername)) {
 					String[] sCurrentWord = sCurrentLine.split(",");
 					this.benutzername = sCurrentWord[0];

@@ -8,10 +8,12 @@ public class TestLogin {
 		Kunde a = new Kunde();
 		Scanner scanner = new Scanner(System.in);
 		String benutzername;
+		int abbruch = 0;
 
 		// Login mit Benutzername & Passwort
+		do {
 		System.out.println("Geben Sie einen Benutzernamen ein:");
-		benutzername = scanner.nextLine();
+		benutzername = scanner.nextLine().toLowerCase();
 
 		System.out.println("Geben Sie ein gewünschtes Passwort ein: ");
 		String passwort = scanner.nextLine();
@@ -52,6 +54,8 @@ public class TestLogin {
 
 		} else {
 			System.out.println("Nochmals.");
+			abbruch=1;
 		}
+		} while (abbruch==1);
 	}
 }

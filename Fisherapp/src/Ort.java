@@ -3,8 +3,8 @@ public class Ort extends Standort {
 	// Attribut
 	String ort;
 	String plz;
-	int breitengrad;
-	int laengengrad;
+	double bg;
+	double lg;
 	
 	
 	//Methoden
@@ -20,17 +20,17 @@ public class Ort extends Standort {
 	public void setPlz(String plz) {
 		this.plz = plz;
 	}
-	public int getBreitengrad() {
-		return breitengrad;
+	public double getBg() {
+		return bg;
 	}
-	public void setBreitengrad(int breitengrad) {
-		this.breitengrad = breitengrad;
+	public void setBg(int bg) {
+		this.bg = bg;
 	}
-	public int getLaengengrad() {
-		return laengengrad;
+	public double getLg() {
+		return lg;
 	}
-	public void setLaengengrad(int laengengrad) {
-		this.laengengrad = laengengrad;
+	public void setLg(int lg) {
+		this.lg = lg;
 	}
 	
 
@@ -67,9 +67,9 @@ public class Ort extends Standort {
 //		
 //	}
 //	
-//	// Konstruktor
-//	// lg = Längengrad / bg = Breitengrad
-//	public Ort(double lg, double bg) {
-//		super(lg, bg);
-//	}
+	// Konstruktor
+	// lg = Längengrad / bg = Breitengrad
+	public Ort(double lg, double bg) {
+		super(lg, bg);
+	}
 }
