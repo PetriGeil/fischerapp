@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class TestWetter {
 	public static void main(String[] args) {
-		int x = 900; // Luftdruck
+		int x = 900; // Luftdruck in hektopascal angeben
 		int y = 1; // Regen: 0=Regen, 1=kein Regen
 		Wetter a = new Wetter();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
