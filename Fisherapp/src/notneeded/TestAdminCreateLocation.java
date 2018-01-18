@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class TestAdminCreateLocation {
-	private static final String filename = "Location.txt";
+	private static final String filename = "C:\\Users\\Fabian Meier\\git\\fischerapp\\Fisherapp\\src\\Location.txt";
 
 	public static void main(String[] args) {
 		// Buffered Reader oder FIle Reader oder Kombination?

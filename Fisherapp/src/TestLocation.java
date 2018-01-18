@@ -8,7 +8,7 @@ public class TestLocation {
 	public static void main(String[] args) {
 		BufferedReader br = null;
 		try {
-			br = new BufferedReader(new FileReader(new File("Location.txt")));
+			br = new BufferedReader(new FileReader(new File("C:\\Users\\Fabian Meier\\git\\fischerapp\\Fisherapp\\src\\Location.txt")));
 			String line = null;
 			while ((line = br.readLine()) != null) {
 				// Ganze Zeile:
