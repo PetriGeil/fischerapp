@@ -30,8 +30,8 @@ public class TestWetter {
 			System.out.println("\t\t\tEingabe Datumformat uerberpruefen, heutiges Datum wurde automatisch eingesetzt");
 		}
 
-		System.out.println("Windst?rke in : \t" + a.getWind() + "km/h");
-		System.out.println("Lufttemperatur in: \t" + "" + a.getLufttemperatur() + "?C");
+		System.out.println("Windstaerke in : \t" + a.getWind() + "km/h");
+		System.out.println("Lufttemperatur in: \t" + "" + a.getLufttemperatur() + "°C");
 
 		if (x < 800) {
 			System.out.println("Luftdruck: \t\tschlechte Fischerbedingungen was den Luftdruck angeht");
